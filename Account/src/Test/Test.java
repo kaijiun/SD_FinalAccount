@@ -21,6 +21,17 @@ public class Test {
     }
 	
 	@Test
+    public void testNestedAccounts() {
+        Account a;
+
+        a = ledger.getAccount("Cash");
+        assertEquals(cash, a);
+
+        a = ledger.getAccount("Cash:Anne");
+        assertEquals(anne, a);
+    }
+	
+	@Test
     public void makePosting() throws AccountingException {
         ledger.newPosting(new Date(), "Received $10 from Anne")
                 .debit("Cash:Anne", 1000)
