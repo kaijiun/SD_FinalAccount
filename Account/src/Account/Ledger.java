@@ -67,27 +67,11 @@ public class Ledger<Entry> {
         return postings;
     }
     
-    public List<Entry> Posting () {
-        Ledger ledger;
-        Date postingDate;
-        String memo;
-        String Entries;
-        List<Entry> entries;
-        Ledger l;
-        return entries = new ArrayList<Entry>();
+    Posting newPosting(Date date, String memo) {
+        Posting p = new Posting(this);
+        p.setPostingDate(date);
+        p.setMemo(memo);
+        return p;
     }
-
-	public Map<String, Account> getAccounts() {
-		return accounts;
-	}
-
-	public void setAccounts(Map<String, Account> accounts) {
-		this.accounts = accounts;
-	}
-
-	public void setPostings(ArrayList postings) {
-		this.postings = postings;
-	}
-
 
 }
