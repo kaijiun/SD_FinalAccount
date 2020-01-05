@@ -9,4 +9,5 @@ public class NonExistantAccountException extends AccountingException {
                     accountName
                 ));
     }
+    
 }
