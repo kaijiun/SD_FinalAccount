@@ -7,14 +7,15 @@ import java.util.List;
 import java.util.Map;
 
 public class Ledger<Entry> {
-    private Map<String, Account> accounts;
+    private static final String Account = null;
+	private static Map<String, Account> accounts;
     private ArrayList postings;
 
     public Ledger() {
         accounts = new HashMap<String, Account>();
         postings = new ArrayList();
     }
-
+    
     public Account newAccount(String name, Account.Type type) {
         // Split name at ':'
         String names[] = name.split(":");

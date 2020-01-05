@@ -8,8 +8,6 @@ import java.util.List;
 import java.util.Map;
 
 public class Account<Posting> {
-	
-	
 
 	public enum Type {
         ASSET(-1),
